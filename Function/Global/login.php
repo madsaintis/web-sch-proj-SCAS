@@ -10,13 +10,13 @@ $sql="SELECT * FROM user WHERE username='$myusername' and password='$mypassword'
 
 $result = mysqli_query($conn, $sql);
 
-$rows=mysql_query($result);
+$rows=mysqli_fetch_assoc($result);
 
 $user_name=$rows["Username"];
 $user_password=$rows["Password"];
 $user_level=$rows["User_Level"];
 
-$count=mysql_fetch_assoc($result);
+$count=mysqli_fetch_assoc($result);
 
 if($count==1){
 
